@@ -9,7 +9,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - netflix.example.com
+    - ott.bezawada.link
     secretName: netflix-app-tls
   rules:
   - host: ott.bezawada.link

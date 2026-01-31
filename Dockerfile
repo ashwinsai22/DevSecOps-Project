@@ -1,4 +1,8 @@
 FROM node:16.17.0-alpine as builder
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+# Copy our custom SPA config
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 WORKDIR /app
 COPY ./package.json .
 COPY ./yarn.lock .
